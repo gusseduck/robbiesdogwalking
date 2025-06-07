@@ -237,20 +237,23 @@ export default function Home() {
         )}
       </nav>
 
-      {/* Hero Section */}
-      <section id="home" className="relative bg-gradient-to-r from-forest to-green-700 text-white">
-        <div 
-          className="absolute inset-0 bg-cover bg-center opacity-20" 
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')"
-          }}
+      {/* Hero Image Section */}
+      <section id="home" className="relative">
+        <img 
+          src="/@assets/Screenshot 2025-06-07 123852_1749292807560.png" 
+          alt="Robbie's Dog Walking Services"
+          className="w-full h-screen object-cover"
         />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+      </section>
+
+      {/* Welcome Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-gray-900">
               Professional Dog Walking Services
             </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-600">
               Keep your furry friend happy, healthy, and well-exercised with our caring and professional dog walking services in your neighborhood.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -263,7 +266,7 @@ export default function Home() {
               <Button 
                 onClick={() => scrollToSection("services")} 
                 variant="outline" 
-                className="border-2 border-white text-white hover:bg-white hover:text-forest px-8 py-4 text-lg font-semibold"
+                className="border-2 border-forest text-forest hover:bg-forest hover:text-white px-8 py-4 text-lg font-semibold"
               >
                 View Our Services
               </Button>
