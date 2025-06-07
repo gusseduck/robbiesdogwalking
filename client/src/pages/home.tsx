@@ -297,7 +297,6 @@ export default function Home() {
                 <ul className="text-left text-gray-600 space-y-2 mb-6">
                   <li className="flex items-center"><Check className="h-4 w-4 text-green-600 mr-2" />Fresh water provided</li>
                   <li className="flex items-center"><Check className="h-4 w-4 text-green-600 mr-2" />Exercise & playtime</li>
-                  <li className="flex items-center"><Check className="h-4 w-4 text-green-600 mr-2" />Basic health check</li>
                 </ul>
                 <Button 
                   onClick={() => scrollToSection("booking")} 
