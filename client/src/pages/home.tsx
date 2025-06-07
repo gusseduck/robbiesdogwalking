@@ -1,35 +1,52 @@
 import { useState } from "react";
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { apiRequest } from "@/lib/queryClient";
-import { insertBookingSchema, insertReviewSchema, insertContactSchema, type Review } from "@shared/schema";
+import emailjs from '@emailjs/browser';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { StarRating } from "@/components/ui/star-rating";
 import { useToast } from "@/hooks/use-toast";
 import { Phone, Mail, Clock, MapPin, Star, Heart, Brain, Users, Shield, Zap, Dog, Check, Calendar, PhoneCall } from "lucide-react";
-import { format } from "date-fns";
 import heroImage from "@assets/Screenshot 2025-06-07 123852_1749292807560.png";
+
+// Static testimonials data
+const staticTestimonials = [
+  {
+    id: 1,
+    customerName: "Sarah Johnson",
+    petName: "Max",
+    rating: 5,
+    comment: "Robbie is absolutely wonderful with Max! He comes back from walks so happy and tired. Highly recommend this service for any dog owner.",
+    date: "March 15, 2024"
+  },
+  {
+    id: 2,
+    customerName: "Mike Thompson",
+    petName: "Luna",
+    rating: 5,
+    comment: "Professional, reliable, and my dog Luna loves her walks with Robbie. Great communication and very trustworthy.",
+    date: "February 28, 2024"
+  },
+  {
+    id: 3,
+    customerName: "Emma Wilson",
+    petName: "Charlie",
+    rating: 5,
+    comment: "Charlie has been going on walks with Robbie for 3 months now. He's noticeably happier and more well-behaved. Excellent service!",
+    date: "January 20, 2024"
+  }
+];
 
 export default function Home() {
   const { toast } = useToast();
-  const queryClient = useQueryClient();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  // Fetch reviews
-  const { data: reviews = [], isLoading: reviewsLoading } = useQuery<Review[]>({
-    queryKey: ["/api/reviews"],
-  });
+  const [isSubmittingBooking, setIsSubmittingBooking] = useState(false);
+  const [isSubmittingContact, setIsSubmittingContact] = useState(false);
 
   // Booking form
   const bookingForm = useForm({
-    resolver: zodResolver(insertBookingSchema),
     defaultValues: {
       ownerName: "",
       phone: "",
@@ -42,66 +59,45 @@ export default function Home() {
     },
   });
 
-  const bookingMutation = useMutation({
-    mutationFn: async (data: any) => {
-      const response = await apiRequest("POST", "/api/bookings", data);
-      return response.json();
-    },
-    onSuccess: () => {
+  const handleBookingSubmit = async (data: any) => {
+    setIsSubmittingBooking(true);
+    try {
+      // EmailJS configuration - you'll need to set up your EmailJS account
+      await emailjs.send(
+        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
+        'YOUR_BOOKING_TEMPLATE_ID', // Replace with your EmailJS template ID
+        {
+          to_email: 'robbiesdogswalking@gmail.com',
+          from_name: data.ownerName,
+          from_email: data.email,
+          phone: data.phone,
+          dog_name: data.dogName,
+          dog_breed: data.dogBreed,
+          service_type: data.serviceType,
+          preferred_date: data.preferredDate,
+          instructions: data.instructions,
+        },
+        'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+      );
+
       toast({
         title: "Booking Request Submitted",
         description: "Thank you! We will contact you shortly to confirm your appointment.",
       });
       bookingForm.reset();
-      queryClient.invalidateQueries({ queryKey: ["/api/bookings"] });
-    },
-    onError: () => {
+    } catch (error) {
       toast({
         title: "Error",
         description: "Failed to submit booking request. Please try again.",
         variant: "destructive",
       });
-    },
-  });
-
-  // Review form
-  const [reviewRating, setReviewRating] = useState(0);
-  const reviewForm = useForm({
-    resolver: zodResolver(insertReviewSchema),
-    defaultValues: {
-      customerName: "",
-      petName: "",
-      rating: 0,
-      comment: "",
-    },
-  });
-
-  const reviewMutation = useMutation({
-    mutationFn: async (data: any) => {
-      const response = await apiRequest("POST", "/api/reviews", { ...data, rating: reviewRating });
-      return response.json();
-    },
-    onSuccess: () => {
-      toast({
-        title: "Review Submitted",
-        description: "Thank you for your review! It will be displayed shortly.",
-      });
-      reviewForm.reset();
-      setReviewRating(0);
-      queryClient.invalidateQueries({ queryKey: ["/api/reviews"] });
-    },
-    onError: () => {
-      toast({
-        title: "Error",
-        description: "Failed to submit review. Please try again.",
-        variant: "destructive",
-      });
-    },
-  });
+    } finally {
+      setIsSubmittingBooking(false);
+    }
+  };
 
   // Contact form
   const contactForm = useForm({
-    resolver: zodResolver(insertContactSchema),
     defaultValues: {
       name: "",
       phone: "",
@@ -110,27 +106,37 @@ export default function Home() {
     },
   });
 
-  const contactMutation = useMutation({
-    mutationFn: async (data: any) => {
-      const response = await apiRequest("POST", "/api/contacts", data);
-      return response.json();
-    },
-    onSuccess: () => {
+  const handleContactSubmit = async (data: any) => {
+    setIsSubmittingContact(true);
+    try {
+      await emailjs.send(
+        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
+        'YOUR_CONTACT_TEMPLATE_ID', // Replace with your EmailJS template ID
+        {
+          to_email: 'robbiesdogswalking@gmail.com',
+          from_name: data.name,
+          from_email: data.email,
+          phone: data.phone,
+          message: data.message,
+        },
+        'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+      );
+
       toast({
         title: "Message Sent",
         description: "Thank you for your message! We will get back to you soon.",
       });
       contactForm.reset();
-      queryClient.invalidateQueries({ queryKey: ["/api/contacts"] });
-    },
-    onError: () => {
+    } catch (error) {
       toast({
         title: "Error",
         description: "Failed to send message. Please try again.",
         variant: "destructive",
       });
-    },
-  });
+    } finally {
+      setIsSubmittingContact(false);
+    }
+  };
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -139,6 +145,20 @@ export default function Home() {
       setMobileMenuOpen(false);
     }
   };
+
+  // Simple star rating component for static testimonials
+  const StaticStarRating = ({ rating }: { rating: number }) => (
+    <div className="flex space-x-1">
+      {[1, 2, 3, 4, 5].map((star) => (
+        <Star
+          key={star}
+          className={`h-4 w-4 ${
+            star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"
+          }`}
+        />
+      ))}
+    </div>
+  );
 
   return (
     <div className="min-h-screen">
