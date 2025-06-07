@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robbie's Dog Walking | Professional Pet Care Services</title>
+    <meta name="description" content="Professional dog walking services with flexible scheduling, competitive pricing, and personalized care for your furry friends in your area.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <style>
+        :root {
+            --background: 0 0% 100%;
+            --foreground: 222.2 84% 4.9%;
+            --card: 0 0% 100%;
+            --card-foreground: 222.2 84% 4.9%;
+            --popover: 0 0% 100%;
+            --popover-foreground: 222.2 84% 4.9%;
+            --primary: 222.2 47.4% 11.2%;
+            --primary-foreground: 210 40% 98%;
+            --secondary: 210 40% 96%;
+            --secondary-foreground: 222.2 84% 4.9%;
+            --muted: 210 40% 96%;
+            --muted-foreground: 215.4 16.3% 46.9%;
+            --accent: 210 40% 96%;
+            --accent-foreground: 222.2 84% 4.9%;
+            --destructive: 0 84.2% 60.2%;
+            --destructive-foreground: 210 40% 98%;
+            --border: 214.3 31.8% 91.4%;
+            --input: 214.3 31.8% 91.4%;
+            --ring: 222.2 84% 4.9%;
+            --radius: 0.5rem;
+        }
+        
+        .star {
+            color: #fbbf24;
+            font-size: 1.25rem;
+        }
+        
+        .hero-bg {
+            background-image: url('./attached_assets/Screenshot 2025-06-07 123852_1749292807560.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-white">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-gray-900">🐕 Robbie's Dog Walking</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#services" class="text-gray-700 hover:text-blue-600 transition-colors">Services</a>
+                    <a href="#pricing" class="text-gray-700 hover:text-blue-600 transition-colors">Pricing</a>
+                    <a href="#reviews" class="text-gray-700 hover:text-blue-600 transition-colors">Reviews</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
+                    <a href="#book" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition-colors">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg relative h-96">
+        <!-- Image displays without overlay -->
+    </section>
+    
+    <!-- Welcome Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">Professional Dog Walking Services</h1>
+            <p class="text-xl md:text-2xl text-gray-600 mb-8">Reliable, caring, and flexible pet care for your furry family members</p>
+            <a href="#book" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors">Book a Walk Today</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Services</h2>
+                <p class="text-xl text-gray-600">Personalized care for every dog's needs</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <span class="text-2xl">🚶</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Daily Walks</h3>
+                    <p class="text-gray-600">Regular walking schedules to keep your dog healthy and happy. Flexible timing to fit your lifestyle.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                        <span class="text-2xl">🎾</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Playtime & Exercise</h3>
+                    <p class="text-gray-600">Interactive play sessions to ensure your dog gets the physical activity they need for optimal health.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
+                        <span class="text-2xl">💝</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Personalized Care</h3>
+                    <p class="text-gray-600">Tailored attention for each dog's unique personality, energy level, and special requirements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>
+                <p class="text-xl text-gray-600">No hidden fees, just quality care at fair prices</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-4">30 Minute Walk</h3>
+                    <div class="text-3xl font-bold text-blue-600 mb-4">R100</div>
+                    <p class="text-gray-600 mb-6">Perfect for small dogs or quick exercise sessions</p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• 30 minutes of walking</li>
+                        <li>• Basic exercise</li>
+                        <li>• Perfect for small breeds</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-4">1 Hour Walk</h3>
+                    <div class="text-3xl font-bold text-blue-600 mb-4">R180</div>
+                    <p class="text-gray-600 mb-6">Comprehensive exercise for active dogs</p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• Full hour of activity</li>
+                        <li>• Extended exercise</li>
+                        <li>• Great for active breeds</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-blue-50 p-8 rounded-lg border-2 border-blue-200">
+                    <div class="text-sm font-semibold text-blue-600 mb-2">POPULAR</div>
+                    <h3 class="text-xl font-semibold mb-4">Monthly 30min</h3>
+                    <div class="text-3xl font-bold text-blue-600 mb-1">R1,140</div>
+                    <div class="text-sm text-gray-500 mb-4">3 walks/week • 5% discount</div>
+                    <p class="text-gray-600 mb-6">Regular care plan for consistent exercise</p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• 12 walks per month</li>
+                        <li>• 30 minutes each</li>
+                        <li>• 5% monthly savings</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-green-50 p-8 rounded-lg border-2 border-green-200">
+                    <div class="text-sm font-semibold text-green-600 mb-2">BEST VALUE</div>
+                    <h3 class="text-xl font-semibold mb-4">Monthly 1hr</h3>
+                    <div class="text-3xl font-bold text-green-600 mb-1">R2,030</div>
+                    <div class="text-sm text-gray-500 mb-4">3 walks/week • 6% discount</div>
+                    <p class="text-gray-600 mb-6">Premium care for maximum health benefits</p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• 12 walks per month</li>
+                        <li>• 1 hour each</li>
+                        <li>• 6% monthly savings</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">What Pet Parents Say</h2>
+                <p class="text-xl text-gray-600">Real reviews from happy customers</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8" id="reviews-grid">
+                <!-- Reviews will be loaded here if any exist -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex mb-4">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Robbie is amazing with our Golden Retriever! Always reliable and our dog comes home happy and tired."</p>
+                    <div class="font-semibold">Sarah M.</div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex mb-4">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Professional service and great communication. I feel confident leaving my dog in Robbie's care."</p>
+                    <div class="font-semibold">Mike T.</div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex mb-4">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Flexible scheduling and affordable prices. Highly recommend for busy pet owners!"</p>
+                    <div class="font-semibold">Lisa K.</div>
+                </div>
+            </div>
+            
+            <!-- Add Review Form -->
+            <div class="mt-12 max-w-2xl mx-auto">
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold mb-6">Share Your Experience</h3>
+                    <form id="review-form" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Your Name</label>
+                            <input type="text" name="customerName" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Rating</label>
+                            <div class="flex space-x-1" id="star-rating">
+                                <button type="button" class="star-btn text-2xl text-gray-300 hover:text-yellow-400" data-rating="1">★</button>
+                                <button type="button" class="star-btn text-2xl text-gray-300 hover:text-yellow-400" data-rating="2">★</button>
+                                <button type="button" class="star-btn text-2xl text-gray-300 hover:text-yellow-400" data-rating="3">★</button>
+                                <button type="button" class="star-btn text-2xl text-gray-300 hover:text-yellow-400" data-rating="4">★</button>
+                                <button type="button" class="star-btn text-2xl text-gray-300 hover:text-yellow-400" data-rating="5">★</button>
+                            </div>
+                            <input type="hidden" name="rating" id="rating-value" required>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Your Review</label>
+                            <textarea name="reviewText" rows="4" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Tell us about your experience..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md transition-colors">Submit Review</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="book" class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Book Your Dog Walk</h2>
+                <p class="text-xl text-gray-600">Schedule a walk for your furry friend today</p>
+            </div>
+            
+            <div class="bg-gray-50 p-8 rounded-lg">
+                <form id="booking-form" class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Pet Owner Name *</label>
+                        <input type="text" name="ownerName" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
+                        <input type="tel" name="phone" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                        <input type="email" name="email" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Dog's Name *</label>
+                        <input type="text" name="dogName" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Service Type *</label>
+                        <select name="serviceType" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            <option value="">Select a service</option>
+                            <option value="30min">30 Minute Walk - R100</option>
+                            <option value="1hour">1 Hour Walk - R180</option>
+                            <option value="monthly30">Monthly 30min Package - R1,140</option>
+                            <option value="monthly60">Monthly 1hr Package - R2,030</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Preferred Date *</label>
+                        <input type="date" name="preferredDate" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    
+                    <div class="md:col-span-2">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Special Instructions</label>
+                        <textarea name="notes" rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Any special needs, behavioral notes, or preferences for your dog..."></textarea>
+                    </div>
+                    
+                    <div class="md:col-span-2">
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-md text-lg font-semibold transition-colors">Book Now</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+                <p class="text-xl text-gray-600">Have questions? We'd love to hear from you</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-semibold mb-6">Contact Information</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <span class="text-2xl mr-4">📞</span>
+                            <div>
+                                <div class="font-semibold">Phone</div>
+                                <a href="tel:0663093540" class="text-blue-600 hover:text-blue-700">066 309 3540</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <span class="text-2xl mr-4">✉️</span>
+                            <div>
+                                <div class="font-semibold">Email</div>
+                                <a href="mailto:robbiesdogswalking@gmail.com" class="text-blue-600 hover:text-blue-700">robbiesdogswalking@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <span class="text-2xl mr-4">⏰</span>
+                            <div>
+                                <div class="font-semibold">Available Hours</div>
+                                <div class="text-gray-600">Monday - Sunday: 7AM - 7PM</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-6">Send us a Message</h3>
+                    <form id="contact-form" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Your Name *</label>
+                            <input type="text" name="name" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                            <input type="email" name="email" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                            <input type="text" name="subject" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Message *</label>
+                            <textarea name="message" rows="4" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="How can we help you?"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md transition-colors">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-2xl font-bold mb-4">🐕 Robbie's Dog Walking</h3>
+                    <p class="text-gray-300 mb-4">Professional, reliable, and caring dog walking services. Your pet's happiness and health are our top priorities.</p>
+                    <div class="flex space-x-4">
+                        <a href="tel:0663093540" class="text-gray-300 hover:text-white">📞 066 309 3540</a>
+                        <a href="mailto:robbiesdogswalking@gmail.com" class="text-gray-300 hover:text-white">✉️ Email Us</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>30 Minute Walks</li>
+                        <li>1 Hour Walks</li>
+                        <li>Monthly Packages</li>
+                        <li>Personalized Care</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#services" class="hover:text-white">Services</a></li>
+                        <li><a href="#pricing" class="hover:text-white">Pricing</a></li>
+                        <li><a href="#reviews" class="hover:text-white">Reviews</a></li>
+                        <li><a href="#contact" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Robbie's Dog Walking. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize EmailJS
+        (function() {
+            emailjs.init("YOUR_PUBLIC_KEY"); // Replace with actual EmailJS public key
+        })();
+
+        // Star rating functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const starButtons = document.querySelectorAll('.star-btn');
+            const ratingValue = document.getElementById('rating-value');
+            
+            starButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const rating = parseInt(this.getAttribute('data-rating'));
+                    ratingValue.value = rating;
+                    
+                    starButtons.forEach((btn, index) => {
+                        if (index < rating) {
+                            btn.classList.remove('text-gray-300');
+                            btn.classList.add('text-yellow-400');
+                        } else {
+                            btn.classList.remove('text-yellow-400');
+                            btn.classList.add('text-gray-300');
+                        }
+                    });
+                });
+            });
+
+            // Form submissions
+            const bookingForm = document.getElementById('booking-form');
+            const contactForm = document.getElementById('contact-form');
+            const reviewForm = document.getElementById('review-form');
+
+            // Booking form submission
+            bookingForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const formData = new FormData(this);
+                const templateParams = {
+                    to_email: 'robbiesdogswalking@gmail.com',
+                    from_name: formData.get('ownerName'),
+                    from_email: formData.get('email'),
+                    phone: formData.get('phone'),
+                    dog_name: formData.get('dogName'),
+                    service_type: formData.get('serviceType'),
+                    preferred_date: formData.get('preferredDate'),
+                    notes: formData.get('notes') || 'No special instructions',
+                    subject: 'New Dog Walking Booking Request'
+                };
+
+                // For now, create a mailto link as fallback
+                const mailtoLink = `mailto:robbiesdogswalking@gmail.com?subject=Booking Request - ${templateParams.dog_name}&body=Name: ${templateParams.from_name}%0APhone: ${templateParams.phone}%0AEmail: ${templateParams.from_email}%0ADog Name: ${templateParams.dog_name}%0AService: ${templateParams.service_type}%0ADate: ${templateParams.preferred_date}%0ANotes: ${templateParams.notes}`;
+                
+                window.location.href = mailtoLink;
+                alert('Your booking request has been prepared. Your email client should open with the booking details.');
+            });
+
+            // Contact form submission
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const formData = new FormData(this);
+                const mailtoLink = `mailto:robbiesdogswalking@gmail.com?subject=${formData.get('subject') || 'Contact Form Message'}&body=Name: ${formData.get('name')}%0AEmail: ${formData.get('email')}%0A%0AMessage:%0A${formData.get('message')}`;
+                
+                window.location.href = mailtoLink;
+                alert('Your message has been prepared. Your email client should open with your message.');
+            });
+
+            // Review form submission
+            reviewForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const formData = new FormData(this);
+                const mailtoLink = `mailto:robbiesdogswalking@gmail.com?subject=New Customer Review&body=Customer: ${formData.get('customerName')}%0ARating: ${formData.get('rating')} stars%0A%0AReview:%0A${formData.get('reviewText')}`;
+                
+                window.location.href = mailtoLink;
+                alert('Thank you for your review! Your email client should open to send your review.');
+                this.reset();
+                ratingValue.value = '';
+                starButtons.forEach(btn => {
+                    btn.classList.remove('text-yellow-400');
+                    btn.classList.add('text-gray-300');
+                });
+            });
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
