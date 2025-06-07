@@ -340,12 +340,12 @@ export default function Home() {
                   <Calendar className="h-8 w-8" />
                 </div>
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">Monthly 30 Min</h3>
-                <div className="text-4xl font-bold text-blue-600 mb-2">R1,200</div>
+                <div className="text-4xl font-bold text-blue-600 mb-2">R1,140</div>
                 <p className="text-gray-600 mb-6">3 walks per week for the whole month</p>
                 <ul className="text-left text-gray-600 space-y-2 mb-6">
                   <li className="flex items-center"><Check className="h-4 w-4 text-green-600 mr-2" />12 walks included</li>
                   <li className="flex items-center"><Check className="h-4 w-4 text-green-600 mr-2" />Flexible scheduling</li>
-                  <li className="flex items-center"><Check className="h-4 w-4 text-green-600 mr-2" />20% savings</li>
+                  <li className="flex items-center"><Check className="h-4 w-4 text-green-600 mr-2" />5% savings</li>
                 </ul>
                 <Button 
                   onClick={() => scrollToSection("booking")} 
