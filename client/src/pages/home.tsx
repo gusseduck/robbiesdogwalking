@@ -370,7 +370,6 @@ export default function Home() {
                 <ul className="text-left text-gray-600 space-y-2 mb-6">
                   <li className="flex items-center"><Check className="h-4 w-4 text-green-600 mr-2" />12 extended walks</li>
                   <li className="flex items-center"><Check className="h-4 w-4 text-green-600 mr-2" />Priority scheduling</li>
-                  <li className="flex items-center"><Check className="h-4 w-4 text-green-600 mr-2" />Comprehensive care</li>
                   <li className="flex items-center"><Check className="h-4 w-4 text-green-600 mr-2" />6% savings</li>
                 </ul>
                 <Button 
