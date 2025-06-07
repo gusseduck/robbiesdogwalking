@@ -292,7 +292,7 @@ export default function Home() {
                   <Clock className="h-8 w-8" />
                 </div>
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">30 Minutes</h3>
-                <div className="text-4xl font-bold text-forest mb-2">R50</div>
+                <div className="text-4xl font-bold text-forest mb-2">R100</div>
                 <p className="text-gray-600 mb-6">Perfect for quick exercise and bathroom breaks</p>
                 <ul className="text-left text-gray-600 space-y-2 mb-6">
                   <li className="flex items-center"><Check className="h-4 w-4 text-green-600 mr-2" />Fresh water provided</li>
