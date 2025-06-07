@@ -317,7 +317,7 @@ export default function Home() {
                   <Heart className="h-8 w-8" />
                 </div>
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">1 Hour</h3>
-                <div className="text-4xl font-bold text-orange-accent mb-2">R100</div>
+                <div className="text-4xl font-bold text-orange-accent mb-2">R180</div>
                 <p className="text-gray-600 mb-6">Comprehensive exercise and socialization</p>
                 <ul className="text-left text-gray-600 space-y-2 mb-6">
                   <li className="flex items-center"><Check className="h-4 w-4 text-green-600 mr-2" />Extended exercise time</li>
@@ -365,13 +365,13 @@ export default function Home() {
                   </svg>
                 </div>
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">Monthly 1 Hour</h3>
-                <div className="text-4xl font-bold text-purple-600 mb-2">R1,800</div>
+                <div className="text-4xl font-bold text-purple-600 mb-2">R2,030</div>
                 <p className="text-gray-600 mb-6">3 hour-long walks per week for the whole month</p>
                 <ul className="text-left text-gray-600 space-y-2 mb-6">
                   <li className="flex items-center"><Check className="h-4 w-4 text-green-600 mr-2" />12 extended walks</li>
                   <li className="flex items-center"><Check className="h-4 w-4 text-green-600 mr-2" />Priority scheduling</li>
                   <li className="flex items-center"><Check className="h-4 w-4 text-green-600 mr-2" />Comprehensive care</li>
-                  <li className="flex items-center"><Check className="h-4 w-4 text-green-600 mr-2" />40% savings</li>
+                  <li className="flex items-center"><Check className="h-4 w-4 text-green-600 mr-2" />6% savings</li>
                 </ul>
                 <Button 
                   onClick={() => scrollToSection("booking")} 
