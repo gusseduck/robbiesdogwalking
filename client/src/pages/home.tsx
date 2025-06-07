@@ -15,6 +15,7 @@ import { StarRating } from "@/components/ui/star-rating";
 import { useToast } from "@/hooks/use-toast";
 import { Phone, Mail, Clock, MapPin, Star, Heart, Brain, Users, Shield, Zap, Dog, Check, Calendar, PhoneCall } from "lucide-react";
 import { format } from "date-fns";
+import heroImage from "@assets/Screenshot 2025-06-07 123852_1749292807560.png";
 
 export default function Home() {
   const { toast } = useToast();
@@ -240,7 +241,7 @@ export default function Home() {
       {/* Hero Image Section */}
       <section id="home" className="relative">
         <img 
-          src="/@assets/Screenshot 2025-06-07 123852_1749292807560.png" 
+          src={heroImage} 
           alt="Robbie's Dog Walking Services"
           className="w-full h-screen object-cover"
         />
