@@ -341,9 +341,9 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">Monthly 30 Min</h3>
                 <div className="text-4xl font-bold text-blue-600 mb-2">R1,200</div>
-                <p className="text-gray-600 mb-6">Daily 30-minute walks for the whole month</p>
+                <p className="text-gray-600 mb-6">3 walks per week for the whole month</p>
                 <ul className="text-left text-gray-600 space-y-2 mb-6">
-                  <li className="flex items-center"><Check className="h-4 w-4 text-green-600 mr-2" />30 walks included</li>
+                  <li className="flex items-center"><Check className="h-4 w-4 text-green-600 mr-2" />12 walks included</li>
                   <li className="flex items-center"><Check className="h-4 w-4 text-green-600 mr-2" />Flexible scheduling</li>
                   <li className="flex items-center"><Check className="h-4 w-4 text-green-600 mr-2" />20% savings</li>
                 </ul>
@@ -366,9 +366,9 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">Monthly 1 Hour</h3>
                 <div className="text-4xl font-bold text-purple-600 mb-2">R1,800</div>
-                <p className="text-gray-600 mb-6">Premium daily hour-long walks</p>
+                <p className="text-gray-600 mb-6">3 hour-long walks per week for the whole month</p>
                 <ul className="text-left text-gray-600 space-y-2 mb-6">
-                  <li className="flex items-center"><Check className="h-4 w-4 text-green-600 mr-2" />30 extended walks</li>
+                  <li className="flex items-center"><Check className="h-4 w-4 text-green-600 mr-2" />12 extended walks</li>
                   <li className="flex items-center"><Check className="h-4 w-4 text-green-600 mr-2" />Priority scheduling</li>
                   <li className="flex items-center"><Check className="h-4 w-4 text-green-600 mr-2" />Comprehensive care</li>
                   <li className="flex items-center"><Check className="h-4 w-4 text-green-600 mr-2" />40% savings</li>
