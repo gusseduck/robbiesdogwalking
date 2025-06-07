@@ -755,10 +755,10 @@ export default function Home() {
                                 </SelectTrigger>
                               </FormControl>
                               <SelectContent>
-                                <SelectItem value="30min-single">30 Minutes - R50</SelectItem>
-                                <SelectItem value="1hour-single">1 Hour - R100</SelectItem>
-                                <SelectItem value="30min-monthly">Monthly 30 Minutes - R1,200</SelectItem>
-                                <SelectItem value="1hour-monthly">Monthly 1 Hour - R1,800</SelectItem>
+                                <SelectItem value="30min-single">30 Minutes - R100</SelectItem>
+                                <SelectItem value="1hour-single">1 Hour - R180</SelectItem>
+                                <SelectItem value="30min-monthly">Monthly 30 Minutes (12 walks) - R1,140</SelectItem>
+                                <SelectItem value="1hour-monthly">Monthly 1 Hour (12 walks) - R2,030</SelectItem>
                               </SelectContent>
                             </Select>
                             <FormMessage />
